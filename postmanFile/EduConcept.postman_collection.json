@@ -1,0 +1,788 @@
+{
+	"info": {
+		"_postman_id": "fafb0aea-faba-4f1f-b0fa-181645283b58",
+		"name": "EduConcept",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33101677"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Love\",\r\n    \"lastName\":\"Babbar\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\",\r\n    \"email\":\"abirpal282002@gmail.com\",\r\n    \"accountType\":\"Student\",\r\n    \"otp\":\"156290\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_AUTH}}/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"soumyabanerjee783@gmail.com\",\r\n    \"password\":\"&cSMQqV33uQ.nb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_AUTH}}/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Send OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"fimowi9945@glumark.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_AUTH}}/sendotp"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Delete User Profile",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{BASE_PROFILE}}/deleteProfile"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"saikat943422@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_AUTH}}/reset-password-token"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"1234567\",\r\n    \"confirmPassword\":\"1234567\",\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imthc2hpaWl0ZWNoQGdtYWlsLmNvbSIsImlkIjoiNjYyOTEzOGVkYTNiN2Q2Njc5YmViNjMwIiwiaWF0IjoxNzEzOTY4MDIwLCJleHAiOjE3MTQwNTQ0MjB9.MDIPCFZ-mjwjlCuGESEN_6LKlUA4jMrC7WvPfK8Bj_Q\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/api/v1/auth/reset-password"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BASE_PROFILE}}/getUserDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Additional Fields",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"about\": \"Hello, my name is Saikat and I am a DEV. I have 3 years of experience in Backend Developement and specialize in Authentication and Authorization. I am passionate about Cloud and have worked on EduConcept. Please feel free to contact me for any inquiries or collaborations!\",\r\n    \"contactNumber\": 125648959,\r\n    \"dateOfBirth\": \"31.01.2002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_PROFILE}}/updateProfile"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile Picture",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "displayPicture",
+									"type": "file",
+									"src": "/D:/Downloads/IMG_2691.jpg"
+								}
+							]
+						},
+						"url": "{{BASE_PROFILE}}/updateDisplayPicture"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile Picture Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "displayPicture",
+									"type": "file",
+									"src": "/D:/Downloads/IMG_2691.jpg"
+								}
+							]
+						},
+						"url": "{{BASE_PROFILE}}/instructorDashboard"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Add New Category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Devops\",\r\n    \"description\": \"Python is a Famous Programming Language\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_COURSE}}/createCategory"
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_COURSE}}/showAllCategories"
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Category Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryId\":\"646365a0293144d50ae4b1e0\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_COURSE}}/categoryPageDetails"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Category wise page details",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryId\": \"6470fe38bafc55fe7fefb50c\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_COURSE}}/getCategoryPageDetails"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Section",
+					"item": [
+						{
+							"name": "Create Section",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InByYW5heWd1cHRhbWFpbkBnbWFpbC5jb20iLCJpZCI6IjY0NmUyMWE4YTU0ZDkxYzg3YjU4YTc2NiIsImlhdCI6MTY4NDk0Mjk3MCwiZXhwIjoxNjg1MDI5MzcwfQ.EsvQuWLO0oHvxuFFAy2J29y1vS96CzhBCyTE6aF6N2Y"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sectionName\": \"JS Advance - X\",\r\n    \"courseId\": \"646e2a2483c5ffe4a5f048b8\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_COURSE}}/addSection"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sectionName\": \"JS Advance - II\",\r\n    \"sectionId\": \"646e2a2483c5ffe4a5f048b8\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_COURSE}}/updateSection"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sectionId\": \"6466676f241e51446843afd2\",\r\n    \"courseId\": \"64666768241e51446843afcd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_COURSE}}/deleteSection"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sub Section",
+					"item": [
+						{
+							"name": "Create Sub Section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionId",
+											"value": "646513707b02d412689b9697",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Keyword and Variables -II",
+											"type": "text"
+										},
+										{
+											"key": "timeDuration",
+											"value": "6:30",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Learn About ML",
+											"type": "text"
+										},
+										{
+											"key": "videoFile",
+											"type": "file",
+											"src": "/C:/Users/saika/Videos/2023-05-15 21-17-17.mp4"
+										}
+									]
+								},
+								"url": "{{BASE_COURSE}}/addSubSection"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Sub Section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sectionId",
+											"value": "64666a06241e51446843b01a",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Variables and Keywords",
+											"type": "text"
+										},
+										{
+											"key": "timeDuration",
+											"value": "6:30",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Learn About Variable and Keywords",
+											"type": "text"
+										},
+										{
+											"key": "video",
+											"type": "file",
+											"src": "/C:/Users/saika/Videos/2023-04-16 20-14-20.mkv"
+										}
+									]
+								},
+								"url": "{{BASE_COURSE}}/updateSubSection"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Sub Section",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sectionId\": \"646669cf241e51446843b010\",\r\n    \"subSectionId\": \"64666a06241e51446843b01a\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_COURSE}}/deleteSubSection"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "thumbnailImage",
+									"type": "file",
+									"src": "/C:/Users/saika/Downloads/pexels-drift-shutterbug-2085998.jpg"
+								},
+								{
+									"key": "courseName",
+									"value": "MERN Master Class",
+									"type": "text"
+								},
+								{
+									"key": "courseDescription",
+									"value": "Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "499",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "64666729425a8ce9b9b5ea6e",
+									"type": "text"
+								},
+								{
+									"key": "whatYouWillLearn",
+									"value": "sdsdsdsfs",
+									"type": "text"
+								},
+								{
+									"key": "tag",
+									"value": "[1,2,3,4]",
+									"type": "text"
+								},
+								{
+									"key": "instructions",
+									"value": "[\"a\",\"b\",\"c\",\"d\"]",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{BASE_COURSE}}/createCourse"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Course Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiaXJwYWwyODIwMDJAZ21haWwuY29tIiwiaWQiOiI2NDYzNjIyNGM3NmJmY2NhMTVjOTljZTEiLCJpYXQiOjE2ODQyNDQzNjQsImV4cCI6MTY4NDMzMDc2NH0.on5fIA51H3DA0F-f_u3tyiZwkHj4cB0c715EmGGfNbU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "thumbnailImage",
+									"type": "file",
+									"src": "/C:/Users/Aritra Biswas/Downloads/nextjs-cover.jpg"
+								},
+								{
+									"key": "courseName",
+									"value": "Learn C++ Advance",
+									"type": "text"
+								},
+								{
+									"key": "courseDescription",
+									"value": "Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "899",
+									"type": "text"
+								},
+								{
+									"key": "tag",
+									"value": "Hello",
+									"type": "text"
+								},
+								{
+									"key": "whatYouWillLearn",
+									"value": "a,b,b,c",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "64666724425a8ce9b9b5ea6b",
+									"type": "text"
+								},
+								{
+									"key": "courseId",
+									"value": "64666768241e51446843afcd",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{BASE_COURSE}}/editCourse"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BASE_COURSE}}/getAllCourses"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Course Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpbW93aTk5NDVAZ2x1bWFyay5jb20iLCJpZCI6IjY0NWU4ZDZkZjdiNDQ4MTlmNGVlOTc2MCIsImlhdCI6MTY4Mzk4Nzk1OSwiZXhwIjoxNjgzOTk1MTU5fQ.W4LP6jumWy2zzN0OdMrXmNRaV6Fkyx65AugLPhuBw0s"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\":\"647108fa3044a774e61cd765\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_COURSE}}/getCourseDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Ful Course Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpbW93aTk5NDVAZ2x1bWFyay5jb20iLCJpZCI6IjY0NWU4ZDZkZjdiNDQ4MTlmNGVlOTc2MCIsImlhdCI6MTY4Mzk4Nzk1OSwiZXhwIjoxNjgzOTk1MTU5fQ.W4LP6jumWy2zzN0OdMrXmNRaV6Fkyx65AugLPhuBw0s"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\":\"647108f8eac761698a700ce1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_COURSE}}/getFullCourseDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "Buy Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpbW93aTk5NDVAZ2x1bWFyay5jb20iLCJpZCI6IjY0NWU4ZDZkZjdiNDQ4MTlmNGVlOTc2MCIsImlhdCI6MTY4Mzk4Nzk1OSwiZXhwIjoxNjgzOTk1MTU5fQ.W4LP6jumWy2zzN0OdMrXmNRaV6Fkyx65AugLPhuBw0s"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{BASE_PAYMENT}}/capturePayment"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Enrolled Courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsOTQzNDIyQGdtYWlsLmNvbSIsImlkIjoiNjQ2NjZkNzhhMTZkZWFhNGI0MmYxZDQxIiwiaWF0IjoxNjg0NTk0ODU2LCJleHAiOjE2ODQ2ODEyNTZ9.flBIg59squNFmXIzNoNcDNAszEb-TZRumA-PPCq_xwA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_PROFILE}}/getEnrolledCourses"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instructor Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\":\"646ded8cffec41391f05b77f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_COURSE}}/deleteCourse"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course Progress",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\": \"647108f8eac761698a700ce1\",\r\n    \"subsectionId\": \"64710912eac761698a700ceb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_COURSE}}/updateCourseProgress"
+					},
+					"response": []
+				},
+				{
+					"name": "get course progress",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNvdW15YWJhbmVyamVlNzgzQGdtYWlsLmNvbSIsImlkIjoiNjQ3MGZkMjdmZDc0MzFhNmI5OGI5MGUwIiwiaWF0IjoxNjg1MTgyMTc3LCJleHAiOjE2ODUyNjg1Nzd9.VmDDytsCNVRPLfR7KnMDpEmZxUR7ZSkScrq9bB-N4E0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\": \"647108fa3044a774e61cd765\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_COURSE}}/getProgressPercentage"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rating and Review",
+			"item": [
+				{
+					"name": "Add a Rating and Review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd5ZmVseUBtYWlsaW5hdG9yLmNvbSIsImlkIjoiNjQ3MGZlMmQxOTJhYmFlZmRmNjkwNzgxIiwiaWF0IjoxNjg1MTM2NTU3LCJleHAiOjE2ODUyMjI5NTd9.ZhoRe-1WXkQvde71AtujRiyaEUZaZyZe9dglQmpqA60"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 3.5,\r\n    \"review\": \"The Instructor Explains Very Nicely\",\r\n    \"courseId\": \"647108f8eac761698a700ce1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_COURSE}}/createRating"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Average Rating",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\":\"64591c3ba3d9bc75928a04bc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_COURSE}}/getAverageRating"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reviews",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\":\"64591c3ba3d9bc75928a04bc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_COURSE}}/getReviews"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Capture Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:4000/api/v1/payment/capturePayment"
+			},
+			"response": []
+		}
+	]
+}
