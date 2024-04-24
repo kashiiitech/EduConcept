@@ -39,6 +39,37 @@ npm run dev
 # The server(backend) starts on localhost:4000 and client(frontend) on localhost:3000
 ```
 
+---
+**NOTE**
+
+## Configuration
+
+Before running the application, you need to set up the environment variables required for the system to function correctly. Create a `.env` file in the root directory of the project and provide the necessary configurations as shown below:
+
+```plaintext
+# Server Configuration
+PORT = # write port number here
+MONGODB_URL = # enter your MongoDB database URL here
+
+# Cloudinary Configuration for media storage
+CLOUD_NAME = # Cloudinary cloud name here
+API_KEY = # Cloudinary API key here
+API_SECRET = # Cloudinary API secret here
+
+# Email Configuration for sending mails
+MAIL_HOST = smtp.gmail.com
+MAIL_USER = # Your email user here
+MAIL_PASS = # Your email password here
+
+# JWT Configuration for authentication
+JWT_SECRET = # Your JWT secret here, e.g., "Kashif"
+
+# Cloudinary Folder Configuration
+FOLDER_NAME = # Name of the folder that you create in Cloudinary, e.g., "EduConcept"
+```
+
+---
+
 ## Contact Information
 
 If you have any questions, suggestions, or issues, feel free to reach out to me. We value your feedback and are here to help.
