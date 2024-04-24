@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\":\"Love\",\r\n    \"lastName\":\"Babbar\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\",\r\n    \"email\":\"abirpal282002@gmail.com\",\r\n    \"accountType\":\"Student\",\r\n    \"otp\":\"156290\"\r\n    \r\n}",
+							"raw": "{\r\n    \"firstName\":\"Kashif\",\r\n    \"lastName\":\"Ali\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\",\r\n    \"email\":\"kashiiitech@gmail.com\",\r\n    \"accountType\":\"Student\",\r\n    \"otp\":\"156290\"\r\n    \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -34,7 +34,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"soumyabanerjee783@gmail.com\",\r\n    \"password\":\"&cSMQqV33uQ.nb\"\r\n}",
+							"raw": "{\r\n    \"email\":\"kashiiitech@gmail.com\",\r\n    \"password\":\"&cSMQqV33uQ.nb\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
