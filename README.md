@@ -25,19 +25,30 @@ EduConcept follows a monolithic architecture with the backend built using Node.j
 
 
 ## Installation
-```bash
-# Clone the repository
-git clone https://github.com/kashiiitech/EduConcept.git
 
-# Install dependencies for server
-cd EduConcept
-npm install
+1. Clone the repository:
 
-# run the server 
-npm run dev
+    ```
+    git clone https://github.com/kashiiitech/EduConcept.git
+    ```
 
-# The server(backend) starts on localhost:4000 and client(frontend) on localhost:3000
-```
+2. Navigate into the project directory:
+
+    ```
+    cd EduConcept
+    ```
+
+3. Install dependencies:
+
+    ```
+    npm install
+    ```
+
+4. Run the app:
+
+    ```
+    npm start
+    ```
 
 ---
 **NOTE**
