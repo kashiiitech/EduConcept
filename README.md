@@ -1,4 +1,4 @@
-# EduConcept
+# EduConcept || An EdTech Platform
 
 ## Overview
 EduConcept is an advanced ed-tech platform designed to facilitate an immersive learning experience by connecting students and instructors globally. Built using the MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS), this platform enables users to create, consume, and rate educational content.
