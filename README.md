@@ -1,2 +1,52 @@
 # EduConcept
-This is a complete edtech platform created from scratch using MERN Stack.
+
+## Overview
+EduConcept is an advanced ed-tech platform designed to facilitate an immersive learning experience by connecting students and instructors globally. Built using the MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS), this platform enables users to create, consume, and rate educational content.
+
+## Features
+- **Interactive Learning Portal:** Offers a dynamic environment for students with tools for engaging with courses and tracking progress.
+- **Instructor Dashboard:** Provides instructors with the ability to create, manage, and analyze the performance of their courses.
+- **Comprehensive Course Management:** Enables course creation, updating, deletion, and browsing.
+- **User Authentication:** Supports secure login, signup, and password management features, including OTP verification.
+- **Payment Integration:** Integrates Razorpay for secure financial transactions allowing course purchase and enrollment.
+- **Cloud-Based Media Management:** Utilizes Cloudinary for efficient storage and retrieval of multimedia content.
+
+## Technologies Used
+- **Frontend:** ReactJS, Redux, CSS, Tailwind CSS
+- **Backend:** NodeJS, ExpressJS
+- **Database:** MongoDB
+- **Others:** JWT, Bcrypt, Mongoose, Cloudinary, Razorpay
+
+## System Architecture
+EduConcept follows a monolithic architecture with the backend built using Node.js and Express.js, and MongoDB as the primary database. This design ensures tight integration and robust performance across various features.
+
+### Architecture Diagram
+![EduConcept Architecture Diagram](https://res.cloudinary.com/dpnvacdqr/image/upload/v1713969928/eduConcept-backendImages/971c3568-cb15-4b89-a0b1-77595e4ad092.png)
+
+
+## Installation
+```bash
+# Clone the repository
+git clone https://github.com/kashiiitech/EduConcept.git
+
+# Install dependencies for server
+cd EduConcept
+npm install
+
+# run the server 
+npm run dev
+
+# The server(backend) starts on localhost:4000 and client(frontend) on localhost:3000
+```
+
+## Contact Information
+
+If you have any questions, suggestions, or issues, feel free to reach out to me. We value your feedback and are here to help.
+
+- Project Maintainer: **Kashif Ali**
+- Email: kashiiitech@gmail.com
+---
+
+**You can also open an issue in this repository if you encounter any problems or want to request a new feature.**
+
+---
